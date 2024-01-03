@@ -1,0 +1,132 @@
+.contac{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 400px;
+    padding-top: 25px;
+    background: #dddddd;
+    padding-left: 10px;
+}
+h3{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color:#ff2753;
+}
+
+.h3contac{
+    padding-top: 20px;
+    background: #dddddd;
+}
+
+.contac .img{
+    display: flex;
+    flex: 2 0 400px;
+    height: 400px;
+    background: url(../../../../../assets/images/finger-2956974_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.contac .form{
+    display: flex;
+    flex: 1 0 400px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 400px;
+}
+
+.contac .form form{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 200px;
+    padding: 0 20px;
+}
+
+.contac .form .input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+}
+
+
+.form form .input input{
+    width: 80%;
+    padding: 8px;
+    background: #dddddd;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #ff2753;
+    outline: none;
+}
+
+
+
+.form form .input textarea{
+    width: 80%;
+    height: 190px;
+    background: #dddddd;
+    font-size: 18px;
+    padding: 8px;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #ff2753;
+    outline: none;
+}
+
+.form form .input label{
+    position: absolute;
+    left: 12%;
+    color: #888;
+    transition: all .5s;
+    pointer-events: none;
+}
+
+.form form .input .textarea{
+    top: 12px;
+}
+
+.form form .input input:focus ~ label,
+.form form .input input:valid ~ label,
+.form form .input textarea:focus ~ label,
+.form form .input textarea:valid ~ label{
+    transform: translateY(-38px);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ff2753;
+    left: 10%;
+}
+
+
+.input.btn{
+    font-display: flex;
+    justify-content: flex-end !important;
+    
+}
+
+.input input[type = "submit"]{
+    width: 30% !important;
+    cursor: pointer;
+    background: #ff2753 !important;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid transparent  !important;
+    transition: all .5s;
+}
+
+.input input[type = "submit"]:hover{
+    border: 1px solid #ff2753 !important;
+    background:transparent !important;
+    color: #ff2753 ;
+    box-shadow: 0 0 10px 2px #888;
+}

@@ -1,0 +1,57 @@
+footer{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #999;
+}
+
+footer .footer{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #aaa;
+}
+
+footer .redes{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+footer .redes a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #ff2753;
+    color:#fff;
+    transition: all .5s;
+}
+
+footer .redes a:hover{
+    color: #ff2753;
+    background: transparent;
+    transform: scale(2);
+}
+
+footer .madein{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}

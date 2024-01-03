@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    
+    --color-secundario:#DBB41F;
+}
+
+/* ?GENERALES*/
+html{
+    margin: auto;
+    max-width: 2800px;
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+li{
+    list-style: none;
+}
+.w80{
+    width: 80%;
+}
+
+
+/* ?menu principal*/
+.btn-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #ff2753;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #FFF;
+    z-index: 7;
+    transition: all .5s;
+}

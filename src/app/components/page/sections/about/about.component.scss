@@ -1,0 +1,84 @@
+.sobre_mi{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    background: url(../../../../../assets/images/img8.jpg);
+    background-attachment: fixed;
+}
+
+.sobre_mi::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    
+}
+
+.sobre_mi img{ 
+    width: 180px;
+    height: 180px;
+    margin: 30px 0;
+    background: #fff;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.sobre_mi h2{
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #ff2753;
+}
+
+.conteiner-card{
+    display: flex;
+    flex: .7 0 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.card{ /*aca*/
+    display: flex;
+    flex: .7 0 450px;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    z-index: 1;
+    transition: all .5s;
+}
+
+.card:hover{
+    box-shadow: .5px .5px  20px 5px #5c5c5b;
+}
+
+.card span{
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hobbis li{
+    text-align: left;
+    margin: 10px 0;
+}
