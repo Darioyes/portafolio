@@ -1,4 +1,4 @@
-<nav class="principal-menu" id="principal-menu">
+<nav class="principal-menu" id="principal-menu" [ngClass]="menu ? 'main-menu--show':''">
 
     <div class="navimage">
         <img src="../../../../../assets/images/logo.svg" alt="darioico">
@@ -15,5 +15,7 @@
         </ul>
     </div>
 
-    
 </nav>
+<div id="toggle-menu" class="toggle-menu" [ngClass]="menu ? 'toggle-menu--color':'' " (click)="hideMenu()" >
+    <span  class="fa fa-bars"></span>
+</div>

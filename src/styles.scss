@@ -51,3 +51,144 @@ li{
     z-index: 7;
     transition: all .5s;
 }
+
+@media screen and ( min-width: 780px){
+    .toggle-menu{
+        display: none;
+    }
+  
+}
+
+@media screen and ( max-width: 780px) {
+    
+    .btn-top{
+        opacity: 0.3;
+    }
+    .principal-menu{
+        position: absolute;
+        z-index: 10;
+        height: 130px;
+        
+        transform: translateY(-100%);
+        transition: all .5s;
+    }
+    .toggle-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color:#fff;
+        cursor: pointer;
+        z-index: 11;
+        transition: all .5s;
+    }
+
+    .link{
+        position: absolute;
+        //centrar
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;   
+        //background-color: red;
+    }
+
+    .main-menu--show{
+        transform: translateY(0);
+    }
+
+    .toggle-menu--color{
+        color:#ff2753;
+    }
+
+    .link ul{
+        flex-direction: column;
+        
+    }
+
+    .link ul li{
+        padding:.5em;
+        z-index: 10;
+    }
+
+    .title h1{
+        font-size: 45px;
+        letter-spacing: 3px;
+    }
+
+    .contac{
+        gap: 25px;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        padding: 10px;
+    }
+
+    
+    .tecnology{
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 10px;
+    }
+    
+}
+
+@media screen and ( max-width: 480px) {
+
+    .title h1{
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+    .title h2{
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    .sobre_mi img{ 
+        width: 100px;
+        height: 100px;
+        
+    }
+
+    .card{
+        flex: .7 0 350px;
+    }
+
+    .card p{
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .hobbis{
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    
+    h2{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        
+    }
+
+    h3{
+        font-size: 30px;
+        letter-spacing: 2px
+    }
+    
+
+    footer .madein{
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .tecnology{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10px;
+    }
+}

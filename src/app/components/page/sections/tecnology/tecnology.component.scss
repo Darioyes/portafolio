@@ -21,3 +21,20 @@ h3{
 .tecnology img{
     width: 180px;
 }
+
+@media screen and ( max-width: 780px){
+    .tecnology{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px;
+    }
+}
+
+@media screen and ( max-width: 480px){
+    .tecnology{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
+    .tecnology img{
+        width: 100px;
+    }
+}

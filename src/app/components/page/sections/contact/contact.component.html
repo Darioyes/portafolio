@@ -5,22 +5,46 @@
         <div class="img">
         </div>
         <div class="form">
-            <form action="">
+            <form  [formGroup]="formSend" (submit)="sendData()">
                 <div class="input">
-                    <input type="email" name="email" required>
+                    <input formControlName="email"  type="email" name="email" required >
                     <label >Email</label>
                 </div>
+                @if (email?.errors?.['required'] && email?.touched) {
+                    <p class="error">El email es requerido</p>
+                }
+                @if (email?.errors?.['email']) {
+                    <p class="error">Debe ser un email valido</p>
+                }
+                
                 <div class="input">
-                    <input type="text" name="nombre" required>
+                    <input formControlName="name" type="text" name="nombre" required>
                     <label >Nombre</label>
                 </div>
+                @if (name?.errors?.['required'] && name?.touched) {
+                    <p class="error">El nombre es requerido</p>
+                }
+                @if (name?.errors?.['minlength']) {
+                    <p class="error">El nombre debe contener minimo 3 caracteres</p>
+                }
+                
                 <div class="input">
-                    <textarea  name="contenido" id="contenido" required></textarea>
-                    <label class="textarea" >Escribe tú mensaje...</label>
+                    <textarea formControlName = "message"  name="contenido" id="contenido" required ></textarea>
+                    <label  class="textarea" >Escribe tú mensaje...</label>
                 </div>
+                @if (message?.errors?.['required'] && message?.touched) {
+                    <p class="error">El mensaje es requerido</p>
+                }
+                @if (message?.errors?.['minlength']) {
+                    <p class="error">El mensaje debe tener minimo 10 caracteres</p>
+                }
                 <div class="input btn">
-                    <input  type="submit" value="Enviar">
+                    <input  type="submit" value="Enviar" [disabled]="formSend.invalid">
                 </div>
+
+                <!-- pipe de angular para mostrarlos datos del formulario en tipo json -->
+                <!-- <h2>datos del formulario</h2>
+                <p>{{formSend.value | json}}</p> -->
             </form>
         </div>
     </div>
