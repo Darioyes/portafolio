@@ -27,6 +27,9 @@
                 @if (name?.errors?.['minlength']) {
                     <p class="error">El nombre debe contener minimo 3 caracteres</p>
                 }
+                @if (name?.errors?.['maxlength']) {
+                    <p class="error">El nombre debe contener maximo 50 caracteres</p>
+                }
                 
                 <div class="input">
                     <textarea formControlName = "message"  name="contenido" id="contenido" required ></textarea>
@@ -37,6 +40,9 @@
                 }
                 @if (message?.errors?.['minlength']) {
                     <p class="error">El mensaje debe tener minimo 10 caracteres</p>
+                }
+                @if (message?.errors?.['maxlength']) {
+                    <p class="error">El mensaje debe tener maximo 500 caracteres</p>
                 }
                 <div class="input btn">
                     <input  type="submit" value="Enviar" [disabled]="formSend.invalid">
