@@ -78,6 +78,7 @@ export class ContactComponent implements OnInit {
           error:(error) => {
             console.log(error.message)
             this.formErrors = error;
+            this.loading = !this.loading;
             //console.log(this.formErrors.success);
           },
           complete:() => {
