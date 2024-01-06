@@ -6,6 +6,11 @@
         </div>
         <div class="form">
             <form  [formGroup]="formSend" (submit)="sendData()">
+
+                @if (valid) {
+                    <p class="error">Todos los campos son obligatorios</p>
+                }
+            
                 <div class="input">
                     <input formControlName="email"  type="email" name="email" required >
                     <label >Email</label>
@@ -16,6 +21,10 @@
                 @if (email?.errors?.['email']) {
                     <p class="error">Debe ser un email valido</p>
                 }
+                @if (formErrors.success == false) {
+                <p class="error">{{formErrors.errors.email}}</p>
+                }
+                
                 
                 <div class="input">
                     <input formControlName="name" type="text" name="nombre" required>
@@ -29,6 +38,9 @@
                 }
                 @if (name?.errors?.['maxlength']) {
                     <p class="error">El nombre debe contener maximo 50 caracteres</p>
+                }
+                @if (formErrors.success == false) {
+                    <p class="error">{{formErrors.errors.name}}</p>
                 }
                 
                 <div class="input">
@@ -44,8 +56,11 @@
                 @if (message?.errors?.['maxlength']) {
                     <p class="error">El mensaje debe tener maximo 500 caracteres</p>
                 }
+                @if (formErrors.success == false) {
+                    <p class="error">{{formErrors.errors.message}}</p>
+                }
                 <div class="input btn">
-                    <input  type="submit" value="Enviar" [disabled]="formSend.invalid">
+                    <input  type="submit" [value]="loading ? 'Enviar':'Enviando info'" [disabled]="formSend.invalid">
                 </div>
 
                 <!-- pipe de angular para mostrarlos datos del formulario en tipo json -->
