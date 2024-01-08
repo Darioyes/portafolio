@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { HttpClient, HttpErrorResponse, } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse,HttpHeaders } from '@angular/common/http';
 import type { IEmail } from '../interfaces/email';//no realiza transpilacion al pasarlo a produccion
 import { Observable, catchError, throwError } from 'rxjs';
 
@@ -33,9 +33,22 @@ export class SendEmailService {
   //   return throwError( () =>  new Error('Algo ha ocurrido mal, por favor intentalo de nuevo')) 
   // }
 
+  
+  
+
   sendEmail(data:Observable<IEmail>) {
-    return this.http.post('http://127.0.0.1:8000/api/email', data).pipe(
+
+    const headers = new HttpHeaders({
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      //'access-control-allow-origin': '*',
+      //'Authorization': 'Bearer YourAccessToken',  // Agrega aquí tu token de autorización si es necesario
+    });
+    
+    return this.http.post('https://portafoliolara.dariocode.com/api/email', data, { headers: headers }).pipe(
       catchError(this.sendError)
     );
+    //https://portafoliolara.dariocode.com/
+    //http://127.0.0.1:8000/api/email
   }
 }
