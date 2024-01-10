@@ -17,6 +17,9 @@ export class SendEmailService {
     if (error.status === 400 && error.error && error.error.errors) {
       errorMessage = error.error.message;
       success = error.error.success;
+    }else{
+      errorMessage = error.error;
+      success = error.error;
     }
   
     return throwError(() =>  ({ message: errorMessage, errors: error.error.errors, success : success }));
